@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    padding: 0;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(17, 20, 25);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background-color: rgb(49, 58, 65);
+    padding: 1em 0;
+}
+
+h1{
+    padding-left: 1em;
+    color: #FFF;
+}
+
+.fonctions{
+    width: 75%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#ajoutlist{
+    position: absolute;
+    margin: auto;
+    border: 1pt solid #576367;
+    border-radius: 10px;
+    background-color: rgb(23, 26, 33);
+}
+
+label{
+    padding: .2em 0;
+    color: #FFF; 
+}
+
+.add{
+    margin: .5em 0;
+    background-color: rgb(23, 26, 33);
+    color: #FFF;
+    border-radius: 10px;
+    padding: .5em 0;
+}
+
+input{
+    background-color: #576367;
+    color: #FFF;
+}
+
+input#description{
+    height: 2em;
+
+}
+
+button{
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgb(23, 26, 33);
+    color: #FFF;
+}
+
+button:hover{
+    background: rgb(71,192,221);
+    background: linear-gradient(90deg, rgba(71,192,221,1) 0%, rgba(114,39,97,1) 52%, rgba(226,87,84,1) 100%);
+}
+
+#tri{
+    background-color: rgb(23, 26, 33);
+    color: #FFF;
+
+}
+
+#filtreFait{
+    background-color: rgb(23, 26, 33);
+    color: #FFF;
+}
+
+#ajoutlist form{
+    display: grid;
+    padding: 15px;
+}
+
+#todolist{
+    margin: 0 2em;
+    padding: 1.5em 0;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+#todolist div{
+    line-height: 26px;
+    border: 1pt solid black;
+    border-radius: 15px;
+    width: 200px; 
+    padding: 2%;
+    text-align: center;
+    z-index: 0;
+    background-color: rgb(230,255,255);
+    transition: width height margin .5s;
+}
+
+.todoItemTitre{
+    text-align: center;
+    font-weight: bold;
+}
+
+.todoItemDescription{
+    text-align: center;
+}
+
+#todolist .biggerBox {
+    width: 50%;
+    position: absolute;
+    margin: 0% 25%;
+    z-index: 1;
+    transition: width height margin, .5s;
+}
+
+.EditButton{
+    display:none;
+}
+
+.biggerBox > .EditButton{
+    display:inline;
+}
+
+
+#todolist .late{
+    background-color: #fff;
+}
+
+#todolist .completed{
+    background-color: green;
+}

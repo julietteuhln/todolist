@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Todo List</title>
+    <link href="style.css" rel="stylesheet"> 
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>TODO LIST</h1>
+        <div class="fonctions">
+            <button id="ajouter" class="ajouter" onclick="showCreateTodoItem()">AJOUTER</button>
+             <select id="tri" onchange="triTodo(event)">
+                <option value="date_default">Tri par défaut</option>
+                <option value="date_asc">Trier par date asc</option>
+                <option value="date_desc">Trier par date desc</option>
+            </select>
+            <select onchange="filtrage(event)" id="filtreFait">
+                <option value="done_all" >Tous</option>
+                <option value="done_done">Fait</option>
+                <option value="done_not">pas fait</option>
+            </select>
+        </div>
+        <dialog class="ajouter" id="ajoutlist">
+            <form method="dialog" onsubmit="onCreateTodoItem(event)" >
+                <label for="titre">Ajouter un titre</label>
+                <input id="titre" name="titre" size="14" maxlength="150" >
+                <label for="description">Ajouter une description</label>
+                <input id="description" name="description" size="25" rows="4" maxlength="500" type="textarea">
+                <time datetime=""></time>
+                <label for="dateEcheance"> Date d'échéance : </label>
+                <input type="date" id="dateEcheance" />
+                <input type="submit" id="add" class="add" value="Ajouter"/></input>
+            </form>
+        </dialog>
+
+    </div>
+    <div id="todolist"></div>
+    
+</body>
+</html>
